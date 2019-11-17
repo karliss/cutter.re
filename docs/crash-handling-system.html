@@ -1,0 +1,108 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Crash Handling System &#8212; Cutter 1.9.0 documentation</title>
+    <link rel="stylesheet" href="_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.9.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+  </head>
+  <body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cutter 1.9.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="crash-handling-system">
+<h1>Crash Handling System<a class="headerlink" href="#crash-handling-system" title="Permalink to this headline">¶</a></h1>
+<p>Cutter uses <a class="reference external" href="https://github.com/google/breakpad">Breakpad</a> as backend
+for crash handling.</p>
+<p>Crash Handling System is disabled by default to do not interfere developers from debugging.
+To enable this system there is building option <code class="docutils literal"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code>.</p>
+<div class="section" id="solution-description">
+<h2>Solution description<a class="headerlink" href="#solution-description" title="Permalink to this headline">¶</a></h2>
+<p>There are only 2 source files:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">CrashHandler.h</span></code></li>
+<li><code class="docutils literal"><span class="pre">CrashHandler.cpp</span></code></li>
+</ul>
+<p>And API is very simple: only one function - <code class="docutils literal"><span class="pre">initCrashHandler()</span></code> that enables Crash Handling System if
+<code class="docutils literal"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> is true, otherwise does nothing.</p>
+<p>As soon as signal is raised <code class="docutils literal"><span class="pre">crashHandler(int</span> <span class="pre">signum)</span></code> is called with signal’s code as argument.
+This function first of all writes crash dump to OS’s Temp directory to catch core and memory state
+as it was at the crash moment.</p>
+<p>Then crash dialog is shown:</p>
+<img alt="_images/crash-dialog.png" src="_images/crash-dialog.png" />
+<p>If user chose to create crash dump, prepared dump is moved to directory specified by user.
+And then success dialog is shown:</p>
+<img alt="_images/success-dump-dialog.png" src="_images/success-dump-dialog.png" />
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="index.html">Cutter documentation</a>
+<h3><a href="index.html">Table Of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+</ul>
+
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, The Cutter Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+    </div>
+    
+
+  </body>
+</html>

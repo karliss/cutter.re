@@ -1,0 +1,360 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='description' content='Open Source RE Platform powered by radare2.'>
+    <meta name="keywords" content="">
+    <!-- Facebook Open Graph -->	
+    <meta content="Cutter" property="og:site_name">
+    <meta property="og:locale" content="en_US" />
+    <meta content="Build Cutter" property="og:title">
+    <meta content="article" property="og:type">
+    <meta content="Open Source RE Platform powered by radare2." property="og:description">
+    <meta content="https://cutter.re//build/" property="og:url">	
+    <meta content="" property="og:image">
+    
+    
+    	
+    <!-- Twitter cards -->
+    <meta name="twitter:site"    content="@r2gui">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title"   content="Build Cutter">	
+    <meta name="twitter:description" content="Open Source RE Platform powered by radare2.">
+    <meta name="twitter:card"  content="summary"><meta name="twitter:image" content="">
+    <!-- Site Title -->
+    <title> Build Cutter </title>
+    <!--  Add Favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon"/>
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="/assets/css/vendor.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link type="application/atom+xml" rel="alternate" href="https://cutter.re//index.xml" title="Cutter" />
+</head>
+   <body>
+      <main class="main-area">
+
+       
+
+<header class=" bg-color2">
+<div class="container">
+    <div class="header-nav">
+        <div class="row">
+            <div class="col-lg-2">
+             <div class="header-logo">
+    <a href="https://cutter.re/"><img src=" /assets/images/cutter-very-small.svg " alt="Cutter"></a> 
+</div>
+            </div>
+            <div class="col-lg-10">
+              <nav class="cutter-navbar">
+    <ul class="slimmenu main-menu">
+        <li><a href="/blog" class="js-scroll-trigger"><b>Blog</b></a></li>
+        <li>
+            <a href="#">Links</a>
+            <ul>
+                <li><a href="/getting-started"><b>Getting Started</b></a></li>
+                <li><a href="https://github.com/radareorg/cutter-plugins" target="_blank">Plugins</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="/build">Build from source</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </li>
+        <li><a href="/#features" class="js-scroll-trigger">Features</a></li>
+        <li><a href="/docs/" class="js-scroll-trigger">Documentation</a></li>
+        <li><a href="/#community" class="js-scroll-trigger">Community</a></li>
+    </ul>
+</nav>
+            </div>
+        </div>
+    </div>
+     
+    
+    
+    
+    <div class="header-page-title">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="page-title text-center white-all">
+                <h1 class="big-font1">Build Cutter</h1>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    
+</div>
+</header>
+
+       
+        <div class="blog-area bg-color1 p-t-130 p-b-130">
+    <div class="container">
+        <div class="entry-content">
+            <p>If you reached this page that means that you are interested in building Cutter from its source code. By building the latest development version of Cutter you will enjoy the most recent additions and bug fixes that are not on the release version.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If you just want to use the latest Release version of Cutter, please note that we provide pre-compiled binaries for
+Windows, Linux and macOS on our <a href="https://github.com/radareorg/cutter/releases">release page</a></div>
+
+<hr />
+
+<h3 id="getting-started">Getting Started</h3>
+
+<p>First you must get the source of Cutter by cloning the repository:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone --recurse-submodules https://github.com/radareorg/cutter
+</code></pre></div></div>
+<p>The “official” way to build Cutter is by using qmake, but there are two
+alternatives – cmake and meson.</p>
+
+<p>In any case, there are obviously some requirements:</p>
+
+<ul>
+  <li>Radare2 installed from submodule</li>
+  <li>Qt 5.9 or above</li>
+  <li>Python3.6</li>
+  <li>Breakpad installed using script (optional, disabled by default)</li>
+</ul>
+
+<hr />
+
+<h2 id="building-options">Building options</h2>
+
+<p>Note that there are three major building options available:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">CUTTER_ENABLE_PYTHON</code> compile with Python support</li>
+  <li><code class="highlighter-rouge">CUTTER_ENABLE_PYTHON_BINDINGS</code> automatically generate Python Bindings with Shiboken2, required for Python plugins!</li>
+  <li><code class="highlighter-rouge">CUTTER_ENABLE_CRASH_REPORTS</code> is used to compile Cutter with crash handling system enabled (Breakpad)</li>
+</ul>
+
+<hr />
+
+<h2 id="preparing-breakpad">Preparing Breakpad</h2>
+
+<p>If you want to build Cutter with crash handling system, you want prepare Breakpad before.
+For this simply run one of the scripts (according to your OS) from root Cutter directory:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source scripts/prepare_breakpad_linux.sh # Linux
+source scripts/prepare_breakpad_macos.sh # MacOS
+scripts/prepare_breakpad.bat # Windows
+</code></pre></div></div>
+<p>Then if you are building on Linux you want to change <code class="highlighter-rouge">PKG_CONFIG_PATH</code> environment variable
+so it contains <code class="highlighter-rouge">$CUSTOM_BREAKPAD_PREFIX/lib/pkgconfig</code>. For this simply run</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PKG_CONFIG_PATH="$CUSTOM_BREAKPAD_PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH"
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="building-with-qmake">Building with Qmake</h2>
+
+<h4 id="compiling-on-linux--macos">Compiling on Linux / macOS</h4>
+
+<p>The easy way is to simply run <code class="highlighter-rouge">./build.sh</code> from the root directory,
+and let the magic happen. The script will use qmake to build Cutter.</p>
+
+<p>If you want to manually use qmake, follow this steps:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir build; cd build
+qmake ../src/Cutter.pro
+make
+cd ..
+</code></pre></div></div>
+
+<h4 id="additional-steps-for-macos">Additional steps for macOS</h4>
+
+<p>On macOS you will also have to copy the launcher bash script:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv Cutter.app/Contents/MacOS/Cutter Cutter.app/Contents/MacOS/Cutter.bin
+cp ../src/macos/Cutter Cutter.app/Contents/MacOS/Cutter &amp;&amp; chmod +x Cutter.app/Contents/MacOS/Cutter
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="building-with-cmake">Building with Cmake</h2>
+
+<h4 id="requirements">Requirements</h4>
+
+<ul>
+  <li>CMake &gt;= 3.1</li>
+</ul>
+
+<h4 id="building-on-linux">Building on Linux</h4>
+
+<p>The root for CMake is in src/. In-source builds are <strong>not allowed</strong>, so
+you <strong>must</strong> run CMake from a separate directory:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd src
+mkdir build
+cd build
+cmake .. # Don't forget to provide build options
+</code></pre></div></div>
+<p>If all went well, you should now have a working Makefile in your build
+directory:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make
+</code></pre></div></div>
+
+<h4 id="building-on-windows">Building on Windows</h4>
+
+<p>Alternatively, on Windows you can run something like this (depending on
+your Cmake installation)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set CMAKE_PREFIX_PATH=c:\Qt\qt-5.6.2-msvc2013-x86\5.6\msvc2013\lib\cmake
+cd src
+mkdir build
+cd build
+cmake-gui ..
+</code></pre></div></div>
+<p>Click <code class="highlighter-rouge">Configure</code> and select <code class="highlighter-rouge">Visual Studio 14 2015</code> from the list.
+After configuration is done, click <code class="highlighter-rouge">Generate</code> and you can open
+<code class="highlighter-rouge">Cutter.sln</code> to compile the code as usual.</p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cmake: qt development package not found
+</code></pre></div></div>
+<p>Depending on how Qt installed (Distribution packages or using the Qt
+installer application), CMake may not be able to find it by itself if it
+is not in a common place. If that is the case, double check that the
+correct Qt version is installed. Locate its prefix (a directory
+containing bin/, lib/, include/, etc.) and specify it to CMake using
+<code class="highlighter-rouge">CMAKE_PREFIX_PATH</code> in the above process, e.g.:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm CMakeCache.txt # the cache may be polluted with unwanted libraries found before
+cmake -DCMAKE_PREFIX_PATH=/opt/Qt/5.9.1/gcc_64 ..
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="building-with-meson-windows">Building with Meson (Windows)</h2>
+
+<p>Additional requirements:</p>
+
+<ul>
+  <li>Visual Studio 2015 or Visual Studio 2017</li>
+  <li>Ninja build system</li>
+  <li>Meson build system</li>
+</ul>
+
+<p>Download and unpack <a href="https://github.com/ninja-build/ninja/releases">Ninja</a> to the Cutter
+source root directory.</p>
+
+<p>Environment settings (example for x64 version):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:: Export MSVC variables
+CALL "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
+:: Add qmake to PATH
+SET "PATH=C:\Qt\5.10.1\msvc2015_64\bin;%PATH%"
+:: Add Python to PATH
+SET "PATH=C:\Program Files\Python36;%PATH%"
+</code></pre></div></div>
+<p>Install Meson:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -m pip install meson
+</code></pre></div></div>
+<p>To compile Cutter run:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CALL prepare_r2.bat
+CALL build.bat
+</code></pre></div></div>
+
+
+        </div>
+    </div>
+</div>
+        
+        <div class="footer-wrapper">
+    <footer class="footer-area bg-color2">
+        <div class="container">
+            <div class="footer-widget-wrraper">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#" class="footer-logo"><img src="/assets/images/cutter-very-small.svg" alt="Cutter" /></a>
+                        <div class="footer-widget">
+                            <p>Cutter is a FREE and open-source reverse-engineering platform. Cutter is created by
+                                reverse
+                                engineers for reverse engineers </p>
+                            <ul class="social-link list-inline">
+                                <li class="list-inline-item"><a href="https://www.github.com/radareorg/cutter"><i
+                                            class="fab fa-github"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.twitter.com/r2gui"><i
+                                            class="fab fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="https://t.me/r2cutter"><i
+                                            class="fab fa-telegram-plane"></i></a></li>
+                                <li class="list-inline-item"><a href="https://webchat.freenode.net/?channels=#cutter"><i
+                                            class="fas fa-comment-dots"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-widget">
+                            <div class="widget-title">
+                                <h5 class="heading-5">Cutter</h5>
+                            </div>
+                            <ul class="widget-list list-inline">
+                                <li>
+                                    <a href="/build" target="_blank">
+                                        Build From Source
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://cutter.re/docs/code.html" target="_blank">
+                                        Contribute
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/radareorg/cutter/issues" target="_blank">
+                                        Report an issue
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/radareorg/cutter/blob/master/COPYING" target="_blank">
+                                        License
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <div class="widget-title">
+                                <h5 class="heading-5">Resources</h5>
+                            </div>
+                            <ul class="widget-list list-inline">
+                                <li><a href="https://cutter.re/docs/" target="_blank">Documentation</a></li>
+                                <li><a href="https://github.com/radareorg/cutter-plugins" target="_blank">Plugins</a>
+                                </li>
+                                <li><a href="https://radare.org" target="_blank">radare2</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-copyright-wrapper text-center">
+                <p>© 2019 Cutter - a <a href="https://radare.org/r/"
+                        target="_blank"><b>radare.org</b></a> project • Website by <a href="https://www.megabeets.net"
+                        target="_blank"><b>Megabeets</b></a> </p>
+            </div>
+            <a href="#" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
+        </div>
+        <ul class="footer-shape list-inline">
+            <li class="left"><img src="/assets/images/footer-shap.png" alt="footer shape" /></li>
+            <li class="right"><img src="/assets/images/footer-shap2.png" alt="footer shape" /></li>
+        </ul>
+    </footer>
+</div>
+      </main>
+      <!-- jQuery -->
+      <script src="/assets/js/vendor.min.js"></script>
+      <script src="/assets/js/app.js"></script>
+   </body>
+</html>

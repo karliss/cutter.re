@@ -1,0 +1,159 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>GraphvizLayout &#8212; Cutter 1.9.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.9.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="HeadersModel" href="classHeadersModel.html" />
+    <link rel="prev" title="GraphWidget" href="classGraphWidget.html" />
+
+  </head>
+  <body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classHeadersModel.html" title="HeadersModel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classGraphWidget.html" title="GraphWidget"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../widgetslist.html" accesskey="U">Widgets</a> &#187;</li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="graphvizlayout">
+<h1>GraphvizLayout<a class="headerlink" href="#graphvizlayout" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv214GraphvizLayout">
+<span id="GraphvizLayout"></span><span class="target" id="classGraphvizLayout"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">GraphvizLayout</code><a class="headerlink" href="#_CPPv214GraphvizLayout" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from <a class="reference internal" href="classGraphLayout.html#classGraphLayout"><span class="std std-ref">GraphLayout</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N14GraphvizLayout8LineTypeE">
+<span id="GraphvizLayout::LineType"></span><span class="target" id="classGraphvizLayout_1adbcfc2c91e6f41eb227905130c16700f"></span><em class="property">enum </em><code class="descname">LineType</code><a class="headerlink" href="#_CPPv2N14GraphvizLayout8LineTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N14GraphvizLayout5OrthoE">
+<span class="target" id="classGraphvizLayout_1adbcfc2c91e6f41eb227905130c16700fa170d5dfdfd387d456a0749b4a8e1524f"></span><code class="descname">Ortho</code><a class="headerlink" href="#_CPPv2N14GraphvizLayout5OrthoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N14GraphvizLayout8PolylineE">
+<span class="target" id="classGraphvizLayout_1adbcfc2c91e6f41eb227905130c16700faf8fb02b84176d0b0f0007abfd9264fb9"></span><code class="descname">Polyline</code><a class="headerlink" href="#_CPPv2N14GraphvizLayout8PolylineE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N14GraphvizLayout9DirectionE">
+<span id="GraphvizLayout::Direction"></span><span class="target" id="classGraphvizLayout_1ac84b7908b643696c3fd481131e30ebee"></span><em class="property">enum </em><code class="descname">Direction</code><a class="headerlink" href="#_CPPv2N14GraphvizLayout9DirectionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N14GraphvizLayout2TBE">
+<span class="target" id="classGraphvizLayout_1ac84b7908b643696c3fd481131e30ebeeaff88442a425c06d961f97bccb11ddf5d"></span><code class="descname">TB</code><a class="headerlink" href="#_CPPv2N14GraphvizLayout2TBE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N14GraphvizLayout2LRE">
+<span class="target" id="classGraphvizLayout_1ac84b7908b643696c3fd481131e30ebeea90a7c45eaffbd575ca6fb361e6d170a4"></span><code class="descname">LR</code><a class="headerlink" href="#_CPPv2N14GraphvizLayout2LRE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N14GraphvizLayout14GraphvizLayoutE8LineType9Direction">
+<span id="GraphvizLayout::GraphvizLayout__LineType.Direction"></span><span class="target" id="classGraphvizLayout_1a239439ee46de956c805766f45573d035"></span><code class="descname">GraphvizLayout</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N14GraphvizLayout8LineTypeE" title="GraphvizLayout::LineType">LineType</a> <em>lineType</em>, <a class="reference internal" href="#_CPPv2N14GraphvizLayout9DirectionE" title="GraphvizLayout::Direction">Direction</a> <em>direction</em> = Direction::TB<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N14GraphvizLayout14GraphvizLayoutE8LineType9Direction" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK14GraphvizLayout15CalculateLayoutERNSt13unordered_mapI4ut6410GraphBlockEE4ut64RiRi">
+<span id="GraphvizLayout::CalculateLayout__std::unordered_map:ut64.GraphBlock:R.ut64.iR.iRC"></span><span class="target" id="classGraphvizLayout_1a8d5f5de58e692df377b0627ff4367c5d"></span>void <code class="descname">CalculateLayout</code><span class="sig-paren">(</span>std::unordered_map&lt;ut64, GraphBlock&gt; &amp;<em>blocks</em>, ut64 <em>entry</em>, int &amp;<em>width</em>, int &amp;<em>height</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14GraphvizLayout15CalculateLayoutERNSt13unordered_mapI4ut6410GraphBlockEE4ut64RiRi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table Of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, The Cutter Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+    </div>
+    
+
+  </body>
+</html>

@@ -1,0 +1,179 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>RegisterRefModel &#8212; Cutter 1.9.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.9.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="RegisterRefProxyModel" href="classRegisterRefProxyModel.html" />
+    <link rel="prev" title="RawAddrDock" href="classRawAddrDock.html" />
+
+  </head>
+  <body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classRegisterRefProxyModel.html" title="RegisterRefProxyModel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classRawAddrDock.html" title="RawAddrDock"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../widgetslist.html" accesskey="U">Widgets</a> &#187;</li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="registerrefmodel">
+<h1>RegisterRefModel<a class="headerlink" href="#registerrefmodel" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv216RegisterRefModel">
+<span id="RegisterRefModel"></span><span class="target" id="classRegisterRefModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">RegisterRefModel</code><a class="headerlink" href="#_CPPv216RegisterRefModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from QAbstractListModel</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N16RegisterRefModel6ColumnE">
+<span id="RegisterRefModel::Column"></span><span class="target" id="classRegisterRefModel_1aeefb5dfbb7cc6d7dd21a9e7bcaa5ea00"></span><em class="property">enum </em><code class="descname">Column</code><a class="headerlink" href="#_CPPv2N16RegisterRefModel6ColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N16RegisterRefModel9RegColumnE">
+<span class="target" id="classRegisterRefModel_1aeefb5dfbb7cc6d7dd21a9e7bcaa5ea00a2786c874fb95e320d3389fbcca331980"></span><code class="descname">RegColumn</code> = 0<a class="headerlink" href="#_CPPv2N16RegisterRefModel9RegColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N16RegisterRefModel11ValueColumnE">
+<span class="target" id="classRegisterRefModel_1aeefb5dfbb7cc6d7dd21a9e7bcaa5ea00a4140a00bbb85c6cc9c6163d3228b2b76"></span><code class="descname">ValueColumn</code><a class="headerlink" href="#_CPPv2N16RegisterRefModel11ValueColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N16RegisterRefModel9RefColumnE">
+<span class="target" id="classRegisterRefModel_1aeefb5dfbb7cc6d7dd21a9e7bcaa5ea00a8c2c37c49a97122e1c4697605a35827b"></span><code class="descname">RefColumn</code><a class="headerlink" href="#_CPPv2N16RegisterRefModel9RefColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N16RegisterRefModel11ColumnCountE">
+<span class="target" id="classRegisterRefModel_1aeefb5dfbb7cc6d7dd21a9e7bcaa5ea00a191d348b2196e446245393406f9a2365"></span><code class="descname">ColumnCount</code><a class="headerlink" href="#_CPPv2N16RegisterRefModel11ColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N16RegisterRefModel4RoleE">
+<span id="RegisterRefModel::Role"></span><span class="target" id="classRegisterRefModel_1a082ba8faa9d0e661338e398b4f0d7ffc"></span><em class="property">enum </em><code class="descname">Role</code><a class="headerlink" href="#_CPPv2N16RegisterRefModel4RoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N16RegisterRefModel26RegisterRefDescriptionRoleE">
+<span class="target" id="classRegisterRefModel_1a082ba8faa9d0e661338e398b4f0d7ffcaa7ab84830dd9884d2484b9ad70124d59"></span><code class="descname">RegisterRefDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv2N16RegisterRefModel26RegisterRefDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16RegisterRefModel16RegisterRefModelEP5QListI22RegisterRefDescriptionEP7QObject">
+<span id="RegisterRefModel::RegisterRefModel__QList:RegisterRefDescription:P.QObjectP"></span><span class="target" id="classRegisterRefModel_1a901232bba0325257f5c78cb0494c2dfd"></span><code class="descname">RegisterRefModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structRegisterRefDescription.html#_CPPv222RegisterRefDescription" title="RegisterRefDescription">RegisterRefDescription</a>&gt; *<em>registerRefs</em>, QObject *<em>parent</em> = 0<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16RegisterRefModel16RegisterRefModelEP5QListI22RegisterRefDescriptionEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16RegisterRefModel8rowCountERK11QModelIndex">
+<span id="RegisterRefModel::rowCount__QModelIndexCRC"></span><span class="target" id="classRegisterRefModel_1aa8dc8fc1d30b4698a264c3d619c39a41"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16RegisterRefModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16RegisterRefModel11columnCountERK11QModelIndex">
+<span id="RegisterRefModel::columnCount__QModelIndexCRC"></span><span class="target" id="classRegisterRefModel_1a7b4443c8f908cfc1ca9c85436addd68c"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16RegisterRefModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16RegisterRefModel4dataERK11QModelIndexi">
+<span id="RegisterRefModel::data__QModelIndexCR.iC"></span><span class="target" id="classRegisterRefModel_1a3a6270377fe436920602344877cc186e"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16RegisterRefModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16RegisterRefModel10headerDataEiN2Qt11OrientationEi">
+<span id="RegisterRefModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classRegisterRefModel_1aeae2497627236b76a64c479641aa9e9e"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16RegisterRefModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table Of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, The Cutter Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+    </div>
+    
+
+  </body>
+</html>

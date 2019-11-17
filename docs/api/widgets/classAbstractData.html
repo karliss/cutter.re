@@ -1,0 +1,134 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AbstractData &#8212; Cutter 1.9.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.9.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="AddrDockScene" href="classAddrDockScene.html" />
+    <link rel="prev" title="AbstractAddrDock" href="classAbstractAddrDock.html" />
+
+  </head>
+  <body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classAddrDockScene.html" title="AddrDockScene"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classAbstractAddrDock.html" title="AbstractAddrDock"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../widgetslist.html" accesskey="U">Widgets</a> &#187;</li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="abstractdata">
+<h1>AbstractData<a class="headerlink" href="#abstractdata" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv212AbstractData">
+<span id="AbstractData"></span><span class="target" id="classAbstractData"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">AbstractData</code><a class="headerlink" href="#_CPPv212AbstractData" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Subclassed by <a class="reference internal" href="classBufferData.html#classBufferData"><span class="std std-ref">BufferData</span></a>, <a class="reference internal" href="classMemoryData.html#classMemoryData"><span class="std std-ref">MemoryData</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N12AbstractDataD0Ev">
+<span id="AbstractData::~AbstractData"></span><span class="target" id="classAbstractData_1ac1df6955169d2ccccf001f2a6ee2b64d"></span><em class="property">virtual</em> <code class="descname">~AbstractData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N12AbstractDataD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N12AbstractData5fetchE8uint64_ti">
+<span id="AbstractData::fetch__uint64_t.i"></span><span class="target" id="classAbstractData_1a9e9b6aa00bc2b5fa49209ae856752a44"></span><em class="property">virtual</em> void <code class="descname">fetch</code><span class="sig-paren">(</span>uint64_t <em>addr</em>, int <em>len</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N12AbstractData5fetchE8uint64_ti" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N12AbstractData7dataPtrE8uint64_t">
+<span id="AbstractData::dataPtr__uint64_t"></span><span class="target" id="classAbstractData_1a6c9d96011aa659d0a8ad119837c81d13"></span><em class="property">virtual</em> <em class="property">const</em> void *<code class="descname">dataPtr</code><span class="sig-paren">(</span>uint64_t <em>addr</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N12AbstractData7dataPtrE8uint64_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N12AbstractData8maxIndexEv">
+<span id="AbstractData::maxIndex"></span><span class="target" id="classAbstractData_1a9863bdb6a0e99b7514d69261dd862d46"></span><em class="property">virtual</em> uint64_t <code class="descname">maxIndex</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N12AbstractData8maxIndexEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table Of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, The Cutter Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+    </div>
+    
+
+  </body>
+</html>

@@ -1,0 +1,210 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ImportsModel &#8212; Cutter 1.9.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.9.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ImportsProxyModel" href="classImportsProxyModel.html" />
+    <link rel="prev" title="HexdumpWidget" href="classHexdumpWidget.html" />
+
+  </head>
+  <body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classImportsProxyModel.html" title="ImportsProxyModel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classHexdumpWidget.html" title="HexdumpWidget"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../widgetslist.html" accesskey="U">Widgets</a> &#187;</li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="importsmodel">
+<h1>ImportsModel<a class="headerlink" href="#importsmodel" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv212ImportsModel">
+<span id="ImportsModel"></span><span class="target" id="classImportsModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">ImportsModel</code><a class="headerlink" href="#_CPPv212ImportsModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QAbstractTableModel &gt;</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N12ImportsModel6ColumnE">
+<span id="ImportsModel::Column"></span><span class="target" id="classImportsModel_1a366a99ed50467861bd334e0384913653"></span><em class="property">enum </em><code class="descname">Column</code><a class="headerlink" href="#_CPPv2N12ImportsModel6ColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N12ImportsModel13AddressColumnE">
+<span class="target" id="classImportsModel_1a366a99ed50467861bd334e0384913653ab121021a340975654df966aa2aec3c52"></span><code class="descname">AddressColumn</code> = 0<a class="headerlink" href="#_CPPv2N12ImportsModel13AddressColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N12ImportsModel10TypeColumnE">
+<span class="target" id="classImportsModel_1a366a99ed50467861bd334e0384913653a56cd9471697c0436e59e7ce2de801c60"></span><code class="descname">TypeColumn</code><a class="headerlink" href="#_CPPv2N12ImportsModel10TypeColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N12ImportsModel12SafetyColumnE">
+<span class="target" id="classImportsModel_1a366a99ed50467861bd334e0384913653aeea48d28f6adcbb4ae3ad0fe338b7c4a"></span><code class="descname">SafetyColumn</code><a class="headerlink" href="#_CPPv2N12ImportsModel12SafetyColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N12ImportsModel10NameColumnE">
+<span class="target" id="classImportsModel_1a366a99ed50467861bd334e0384913653ae2df48a32a61814eb19ffad805f7f4f0"></span><code class="descname">NameColumn</code><a class="headerlink" href="#_CPPv2N12ImportsModel10NameColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N12ImportsModel11ColumnCountE">
+<span class="target" id="classImportsModel_1a366a99ed50467861bd334e0384913653afdcc5e6e4261d274e19737b93be25ad4"></span><code class="descname">ColumnCount</code><a class="headerlink" href="#_CPPv2N12ImportsModel11ColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N12ImportsModel4RoleE">
+<span id="ImportsModel::Role"></span><span class="target" id="classImportsModel_1a290bafc05a755df735ac2314bdc9a7db"></span><em class="property">enum </em><code class="descname">Role</code><a class="headerlink" href="#_CPPv2N12ImportsModel4RoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N12ImportsModel21ImportDescriptionRoleE">
+<span class="target" id="classImportsModel_1a290bafc05a755df735ac2314bdc9a7dbad4973261c25515365fc4d1cd0029eed1"></span><code class="descname">ImportDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv2N12ImportsModel21ImportDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N12ImportsModel11AddressRoleE">
+<span class="target" id="classImportsModel_1a290bafc05a755df735ac2314bdc9a7dba1022ff5006ef7123622b88ec3a4c5fde"></span><code class="descname">AddressRole</code><a class="headerlink" href="#_CPPv2N12ImportsModel11AddressRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N12ImportsModel12ImportsModelEP5QListI17ImportDescriptionEP7QObject">
+<span id="ImportsModel::ImportsModel__QList:ImportDescription:P.QObjectP"></span><span class="target" id="classImportsModel_1a2d06a141a78c4d4d7c0ca78855ea9d7e"></span><code class="descname">ImportsModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structImportDescription.html#_CPPv217ImportDescription" title="ImportDescription">ImportDescription</a>&gt; *<em>imports</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N12ImportsModel12ImportsModelEP5QListI17ImportDescriptionEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK12ImportsModel8rowCountERK11QModelIndex">
+<span id="ImportsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classImportsModel_1a703ccb7339881f99647454dfcda00d4d"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK12ImportsModel11columnCountERK11QModelIndex">
+<span id="ImportsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classImportsModel_1acec9b896a636ecfce2e6e276b31da8bd"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK12ImportsModel4dataERK11QModelIndexi">
+<span id="ImportsModel::data__QModelIndexCR.iC"></span><span class="target" id="classImportsModel_1a0e8c5ac5852a7102695a053f73921e73"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK12ImportsModel10headerDataEiN2Qt11OrientationEi">
+<span id="ImportsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classImportsModel_1a7f11ef8d68fa614a4f28f1d01d64920e"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK12ImportsModel7addressERK11QModelIndex">
+<span id="ImportsModel::address__QModelIndexCRC"></span><span class="target" id="classImportsModel_1aa444c6982a07e8a44e6d921d817db746"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK12ImportsModel4nameERK11QModelIndex">
+<span id="ImportsModel::name__QModelIndexCRC"></span><span class="target" id="classImportsModel_1ab8a4a0c30cd4ba7b28ce0ea34bed5c7c"></span>QString <code class="descname">name</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel4nameERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get name for item, optional. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Item name or empty QString if item doesn’t have short descriptive name. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">index</span></code>: item intex </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table Of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, The Cutter Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+    </div>
+    
+
+  </body>
+</html>

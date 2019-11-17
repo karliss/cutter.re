@@ -1,0 +1,179 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ZignaturesModel &#8212; Cutter 1.9.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.9.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ZignaturesProxyModel" href="classZignaturesProxyModel.html" />
+    <link rel="prev" title="VisualNavbar" href="classVisualNavbar.html" />
+
+  </head>
+  <body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classZignaturesProxyModel.html" title="ZignaturesProxyModel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classVisualNavbar.html" title="VisualNavbar"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../widgetslist.html" accesskey="U">Widgets</a> &#187;</li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="zignaturesmodel">
+<h1>ZignaturesModel<a class="headerlink" href="#zignaturesmodel" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv215ZignaturesModel">
+<span id="ZignaturesModel"></span><span class="target" id="classZignaturesModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">ZignaturesModel</code><a class="headerlink" href="#_CPPv215ZignaturesModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from QAbstractListModel</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N15ZignaturesModel6ColumnE">
+<span id="ZignaturesModel::Column"></span><span class="target" id="classZignaturesModel_1a926d25cdd9aa6a9364970ae4e5637ce2"></span><em class="property">enum </em><code class="descname">Column</code><a class="headerlink" href="#_CPPv2N15ZignaturesModel6ColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N15ZignaturesModel12OffsetColumnE">
+<span class="target" id="classZignaturesModel_1a926d25cdd9aa6a9364970ae4e5637ce2af9a9f836cd53e653f0da4827cfac7edf"></span><code class="descname">OffsetColumn</code> = 0<a class="headerlink" href="#_CPPv2N15ZignaturesModel12OffsetColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N15ZignaturesModel10NameColumnE">
+<span class="target" id="classZignaturesModel_1a926d25cdd9aa6a9364970ae4e5637ce2ac98abada5277dc746be856818d85aad5"></span><code class="descname">NameColumn</code><a class="headerlink" href="#_CPPv2N15ZignaturesModel10NameColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N15ZignaturesModel11ValueColumnE">
+<span class="target" id="classZignaturesModel_1a926d25cdd9aa6a9364970ae4e5637ce2ac73d88567a65b95b1ca621ee3bcd3f59"></span><code class="descname">ValueColumn</code><a class="headerlink" href="#_CPPv2N15ZignaturesModel11ValueColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N15ZignaturesModel11ColumnCountE">
+<span class="target" id="classZignaturesModel_1a926d25cdd9aa6a9364970ae4e5637ce2a722956e5758b835ade56d3675f7d3160"></span><code class="descname">ColumnCount</code><a class="headerlink" href="#_CPPv2N15ZignaturesModel11ColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N15ZignaturesModel4RoleE">
+<span id="ZignaturesModel::Role"></span><span class="target" id="classZignaturesModel_1a9a0c3928b2310906ca95826b7394db51"></span><em class="property">enum </em><code class="descname">Role</code><a class="headerlink" href="#_CPPv2N15ZignaturesModel4RoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N15ZignaturesModel24ZignatureDescriptionRoleE">
+<span class="target" id="classZignaturesModel_1a9a0c3928b2310906ca95826b7394db51a8a9774132aa9c7784657586c77b236c6"></span><code class="descname">ZignatureDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv2N15ZignaturesModel24ZignatureDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N15ZignaturesModel15ZignaturesModelEP5QListI20ZignatureDescriptionEP7QObject">
+<span id="ZignaturesModel::ZignaturesModel__QList:ZignatureDescription:P.QObjectP"></span><span class="target" id="classZignaturesModel_1a245e2164016acadc8c0e3eae637cda25"></span><code class="descname">ZignaturesModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structZignatureDescription.html#_CPPv220ZignatureDescription" title="ZignatureDescription">ZignatureDescription</a>&gt; *<em>zignatures</em>, QObject *<em>parent</em> = 0<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15ZignaturesModel15ZignaturesModelEP5QListI20ZignatureDescriptionEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK15ZignaturesModel4dataERK11QModelIndexi">
+<span id="ZignaturesModel::data__QModelIndexCR.iC"></span><span class="target" id="classZignaturesModel_1af1133e9615a085395693b4fb9f1a3237"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK15ZignaturesModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK15ZignaturesModel10headerDataEiN2Qt11OrientationEi">
+<span id="ZignaturesModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classZignaturesModel_1a035eb0915839b02cc5b7963d7e9a4806"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK15ZignaturesModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK15ZignaturesModel8rowCountERK11QModelIndex">
+<span id="ZignaturesModel::rowCount__QModelIndexCRC"></span><span class="target" id="classZignaturesModel_1a35851d62e9a92bc70b0e2eb149ece70f"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK15ZignaturesModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK15ZignaturesModel11columnCountERK11QModelIndex">
+<span id="ZignaturesModel::columnCount__QModelIndexCRC"></span><span class="target" id="classZignaturesModel_1a08b24c73fca53f9e6791dff7a2d39578"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK15ZignaturesModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table Of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, The Cutter Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+    </div>
+    
+
+  </body>
+</html>

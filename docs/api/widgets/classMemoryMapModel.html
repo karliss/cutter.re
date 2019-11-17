@@ -1,0 +1,189 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MemoryMapModel &#8212; Cutter 1.9.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.9.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MemoryMapWidget" href="classMemoryMapWidget.html" />
+    <link rel="prev" title="MemoryDockWidget" href="classMemoryDockWidget.html" />
+
+  </head>
+  <body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classMemoryMapWidget.html" title="MemoryMapWidget"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classMemoryDockWidget.html" title="MemoryDockWidget"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../widgetslist.html" accesskey="U">Widgets</a> &#187;</li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="memorymapmodel">
+<h1>MemoryMapModel<a class="headerlink" href="#memorymapmodel" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv214MemoryMapModel">
+<span id="MemoryMapModel"></span><span class="target" id="classMemoryMapModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">MemoryMapModel</code><a class="headerlink" href="#_CPPv214MemoryMapModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QAbstractListModel &gt;</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N14MemoryMapModel6ColumnE">
+<span id="MemoryMapModel::Column"></span><span class="target" id="classMemoryMapModel_1a2c596588d2c637136d7b3be3fe73a70c"></span><em class="property">enum </em><code class="descname">Column</code><a class="headerlink" href="#_CPPv2N14MemoryMapModel6ColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N14MemoryMapModel15AddrStartColumnE">
+<span class="target" id="classMemoryMapModel_1a2c596588d2c637136d7b3be3fe73a70ca6d9435ddc705535c3b6ab92a7373a712"></span><code class="descname">AddrStartColumn</code> = 0<a class="headerlink" href="#_CPPv2N14MemoryMapModel15AddrStartColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N14MemoryMapModel13AddrEndColumnE">
+<span class="target" id="classMemoryMapModel_1a2c596588d2c637136d7b3be3fe73a70ca1b2fdd1a2ae2f32d4a10dc4e4eafc5ef"></span><code class="descname">AddrEndColumn</code><a class="headerlink" href="#_CPPv2N14MemoryMapModel13AddrEndColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N14MemoryMapModel10NameColumnE">
+<span class="target" id="classMemoryMapModel_1a2c596588d2c637136d7b3be3fe73a70ca4ca27076c0cb460e6c70ba016ae9723e"></span><code class="descname">NameColumn</code><a class="headerlink" href="#_CPPv2N14MemoryMapModel10NameColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N14MemoryMapModel10PermColumnE">
+<span class="target" id="classMemoryMapModel_1a2c596588d2c637136d7b3be3fe73a70ca110e41c5b5ae52cb9cebf35cd57f5fbd"></span><code class="descname">PermColumn</code><a class="headerlink" href="#_CPPv2N14MemoryMapModel10PermColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N14MemoryMapModel11ColumnCountE">
+<span class="target" id="classMemoryMapModel_1a2c596588d2c637136d7b3be3fe73a70ca32bb817cc30dc8ad8a530216d257524d"></span><code class="descname">ColumnCount</code><a class="headerlink" href="#_CPPv2N14MemoryMapModel11ColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N14MemoryMapModel4RoleE">
+<span id="MemoryMapModel::Role"></span><span class="target" id="classMemoryMapModel_1ae7d81959efd0ffd8f6bdf02f4ab035fe"></span><em class="property">enum </em><code class="descname">Role</code><a class="headerlink" href="#_CPPv2N14MemoryMapModel4RoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N14MemoryMapModel21MemoryDescriptionRoleE">
+<span class="target" id="classMemoryMapModel_1ae7d81959efd0ffd8f6bdf02f4ab035fea9727bacd71f65dd147f3d4f821ae04ae"></span><code class="descname">MemoryDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv2N14MemoryMapModel21MemoryDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N14MemoryMapModel14MemoryMapModelEP5QListI20MemoryMapDescriptionEP7QObject">
+<span id="MemoryMapModel::MemoryMapModel__QList:MemoryMapDescription:P.QObjectP"></span><span class="target" id="classMemoryMapModel_1af1d97b55a32083aa6314a16c379bd264"></span><code class="descname">MemoryMapModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structMemoryMapDescription.html#_CPPv220MemoryMapDescription" title="MemoryMapDescription">MemoryMapDescription</a>&gt; *<em>memoryMaps</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N14MemoryMapModel14MemoryMapModelEP5QListI20MemoryMapDescriptionEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK14MemoryMapModel8rowCountERK11QModelIndex">
+<span id="MemoryMapModel::rowCount__QModelIndexCRC"></span><span class="target" id="classMemoryMapModel_1a2e3b141c704f73245471baaa783ec603"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK14MemoryMapModel11columnCountERK11QModelIndex">
+<span id="MemoryMapModel::columnCount__QModelIndexCRC"></span><span class="target" id="classMemoryMapModel_1aa0ecc32e306e841617f71a3b16d57146"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK14MemoryMapModel4dataERK11QModelIndexi">
+<span id="MemoryMapModel::data__QModelIndexCR.iC"></span><span class="target" id="classMemoryMapModel_1a6717f62a1ac74fdf894de81371d16b93"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK14MemoryMapModel10headerDataEiN2Qt11OrientationEi">
+<span id="MemoryMapModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classMemoryMapModel_1af0c42bdc33677bf1d189922c739937bb"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK14MemoryMapModel7addressERK11QModelIndex">
+<span id="MemoryMapModel::address__QModelIndexCRC"></span><span class="target" id="classMemoryMapModel_1adcd14eedb8ff501a719f01fc10845386"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table Of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, The Cutter Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+    </div>
+    
+
+  </body>
+</html>
